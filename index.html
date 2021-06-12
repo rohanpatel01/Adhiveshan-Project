@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Project</title>
+</head>
+
+<body>
+    <div class="container" >
+        <div class="row" id="entireThing">
+          <div class="col">
+
+                <div class="row" id ="playerBox">
+                    <h1>Player One</h1>
+                    <h3 id="playerOnePointsHTML" style="padding-top: 50px; text-align: center; width:50%;">0</h3>
+                    <h6 id="playerOnePenalty" style="padding-top: 20px; text-align: center; width:50%;">Penaly</h6>
+                </div>
+                
+                <div class="row" id ="playerBox">
+                    <h1>Player Three</h1>
+                    <h3 id="playerThreePointsHTML" style="padding-top: 50px; text-align: center; width:50%;">0</h3>
+                    <h6 id="playerThreePenalty" style="padding-top: 20px; text-align: center; width:50%;">Do the Macarena silently until it is your turn again.</h6>
+                </div>
+
+          </div>
+
+          <!-- ------------------------ -->
+          <div class="col-6" id="mukhpathBox">
+                <h1>Mukhpath</h1>
+
+                <button onclick="incorrect()" style="margin-right: 200px;" type="button" class="buttons">-</button>
+                <button onclick="correct()" style="margin-left: 231px;"  type="button" class="buttons">+</button>
+               
+                <div class="row" id = "actualMukhpath">
+                    <p id="paragraph">"May Swaminarayan Bhagwan"</p>
+                </div>
+
+                <button type= "button" onClick="showAnswer()" class="answerButton">Show Answer</button>
+                <button type= "button" onClick="previous()" class="answerButton" >Previous</button>
+                <button type= "button" onClick="next()" class="answerButton" >Next</button>
+
+          </div>
+          <!-- -------------------------->
+
+
+          <div class="col">
+
+            <div class="row" id ="playerBox">
+                <h1>Player Two</h1>
+                <h3 id="playerTwoPointsHTML" style="padding-top: 50px; text-align: center; width:50%;">0</h3>
+                <h6 id="playerTwoPenalty" style="padding-top: 20px; text-align: center; width:50%;">Penaly</h6>
+            </div>
+            
+            <div class="row" id ="playerBox">
+                <h1>Player Four</h1>
+                <h3 id="playerFourPointsHTML" style="padding-top: 50px; text-align: center; width:50%;">0</h3>
+                <h6 id="playerFourPenalty" style="padding-top: 20px; text-align: center; width:50%;">Penaly</h6>
+            </div>
+
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+    
+</body>
+
+<script src ="code.js"></script>
+</html>

@@ -1,0 +1,89 @@
+
+
+*
+{
+    border: black solid 1px;
+    padding: 0;
+    margin: 0;
+}
+
+.col
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+#entireThing
+{
+    /* height:2000px; */
+    /* width:100%; */
+}
+
+.buttons
+{
+    height: 50px;
+    width: 50px;
+    
+}
+
+#mukhpathBox
+{
+    height: 500px;  
+}
+
+.answerButton
+{
+    width: 100px; 
+    height:50px;  
+}
+
+#actualMukhpath
+{
+    /* margin: auto;
+    width: 50%;
+    padding-left: 55px;
+    padding-top: 10px; */
+
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+
+.col-6
+{
+    /* text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px; */
+}
+
+#playerBox
+{
+    height: 250px;
+    width: 100%;
+}
+
+.container
+{
+    border: black solid 1px;
+}
+
+h1
+{
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* 
+body
+{
+    background-color: red;
+} */
+
+
+
+
+
