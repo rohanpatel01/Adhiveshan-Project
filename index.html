@@ -12,20 +12,20 @@
 </head>
 
 <body>
-    <div class="container" >
-        <div class="row" id="entireThing">
+    <div class="container" style="width: 2000px;" >
+        <div class="row" id="entireThing" >
           <div class="col">
 
-                <div class="row" id ="playerBox">
+                <div class="row" id ="playerOneBox" style="height: 50%; ">
                     <h1>Player One</h1>
                     <h3 id="playerOnePointsHTML" style="padding-top: 50px; text-align: center; width:50%;">0</h3>
                     <h6 id="playerOnePenalty" style="padding-top: 20px; text-align: center; width:50%;">Penaly</h6>
                 </div>
                 
-                <div class="row" id ="playerBox">
+                <div class="row" id ="playerThreeBox" style="height: 50%;">
                     <h1>Player Three</h1>
                     <h3 id="playerThreePointsHTML" style="padding-top: 50px; text-align: center; width:50%;">0</h3>
-                    <h6 id="playerThreePenalty" style="padding-top: 20px; text-align: center; width:50%;">Do the Macarena silently until it is your turn again.</h6>
+                    <h6 id="playerThreePenalty" style="padding-top: 20px; text-align: center; width:50%;">Penaly</h6>
                 </div>
 
           </div>
@@ -34,7 +34,7 @@
           <div class="col-6" id="mukhpathBox">
                 <h1>Mukhpath</h1>
 
-                <button onclick="incorrect()" style="margin-right: 200px;" type="button" class="buttons">-</button>
+                <button onclick="incorrect()" style="margin-right: 200px; " type="button" class="buttons">-</button>
                 <button onclick="correct()" style="margin-left: 231px;"  type="button" class="buttons">+</button>
                
                 <div class="row" id = "actualMukhpath">
@@ -42,8 +42,8 @@
                 </div>
 
                 <button type= "button" onClick="showAnswer()" class="answerButton">Show Answer</button>
-                <button type= "button" onClick="previous()" class="answerButton" >Previous</button>
-                <button type= "button" onClick="next()" class="answerButton" >Next</button>
+                <!-- <button type= "button" onClik="previous()" class="answerButton" >Previous</button> -->
+                <button type= "button" onClick="next()" class="answerButton">Next</button>
 
           </div>
           <!-- -------------------------->
@@ -51,13 +51,13 @@
 
           <div class="col">
 
-            <div class="row" id ="playerBox">
+            <div class="row" id ="playerTwoBox" style="height: 250px; ">
                 <h1>Player Two</h1>
                 <h3 id="playerTwoPointsHTML" style="padding-top: 50px; text-align: center; width:50%;">0</h3>
                 <h6 id="playerTwoPenalty" style="padding-top: 20px; text-align: center; width:50%;">Penaly</h6>
             </div>
             
-            <div class="row" id ="playerBox">
+            <div class="row" id ="playerFourBox" style="height: 250px;">
                 <h1>Player Four</h1>
                 <h3 id="playerFourPointsHTML" style="padding-top: 50px; text-align: center; width:50%;">0</h3>
                 <h6 id="playerFourPenalty" style="padding-top: 20px; text-align: center; width:50%;">Penaly</h6>

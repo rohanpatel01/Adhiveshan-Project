@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\Crash_Course_Starter_Code"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Adhiveshan Project"
+	}
+}

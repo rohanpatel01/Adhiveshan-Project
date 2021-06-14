@@ -6,7 +6,7 @@ var playerTwoPoints = 0;
 var playerThreePoints = 0;
 var playerFourPoints = 0;
 
-
+console.log("player turn = " + playerTurn);
 
 var penalties = 
 ["Do 5 pushups", "Pretend To Be The Person On Your Right For 10 Minutes."
@@ -307,12 +307,12 @@ let canShowAnswer = true;
 var penaltiesIndex = 0;
 
 
-console.log("Can go next " + canGoNext);
-console.log("Can check anwser " + canCheckAnswer);
-console.log("Penalties index " + penaltiesIndex);
+// console.log("Can go next " + canGoNext);
+// console.log("Can check anwser " + canCheckAnswer);
+// console.log("Penalties index " + penaltiesIndex);
 
 
-
+changeColor();
 
 function incorrect()
 {
@@ -350,6 +350,9 @@ function incorrect()
         console.log("incorrect");
         canGoNext = true;
         canCheckAnswer = false;
+
+        console.log("player turn = " + playerTurn);
+
     }
 }
 
@@ -380,9 +383,12 @@ function correct()
                 // playerTurn++;
             break;
             default:
-                playerOnePoints++;
-                document.getElementById("playerOnePointsHTML").innerHTML = playerOnePoints;
-                playerTurn = 2;
+                //playerOnePoints++;
+                // document.getElementById("playerOnePointsHTML").innerHTML = playerOnePoints;
+                // playerTurn = 2;
+                playerTurn = 1;
+                correct();
+
         } // end of switch
     
         console.log("correct!");
@@ -390,6 +396,7 @@ function correct()
         canCheckAnswer = false;
         canShowAnswer = false;
 
+        console.log("player turn = " + playerTurn);
 
         // change the shlok to the next first three words
         
@@ -412,21 +419,19 @@ function showAnswer()
         canCheckAnswer = true;
         canShowAnswer = false;
     }
-
-    
 }
 
 
-function previous()
-{
-    if(canGoNext)
-    {
-        dictIndex--;
-        console.log("previous");
-        // shows the answer to first three words
-        document.getElementById("paragraph").innerHTML = keys[dictIndex];
-    }
-}
+// function previous()
+// {
+//     if(canGoNext)
+//     {
+//         dictIndex--;
+//         console.log("previous");
+//         // shows the answer to first three words
+//         document.getElementById("paragraph").innerHTML = keys[dictIndex];
+//     }
+// }
 
 function next()
 {
@@ -437,13 +442,59 @@ function next()
         document.getElementById("paragraph").innerHTML = keys[dictIndex];
         //console.log(keys[dictIndex]);
         playerTurn++;
+        changeColor();
+        
+
         canGoNext = false;
         canCheckAnswer = false;
         canShowAnswer = true;
+
+        console.log("player turn = " + playerTurn);
+
+
     }
     
     
 }
 
+
+function changeColor()
+{
+    switch(playerTurn) 
+        {
+            case 1:
+                document.getElementById("playerOneBox").style.backgroundColor = "green";
+                document.getElementById("playerFourBox").style.backgroundColor = "#F5C9CA";
+                console.log("player turn = " + playerTurn);
+
+              break;
+            case 2:
+                document.getElementById("playerOneBox").style.backgroundColor = "#F5C9CA";
+                document.getElementById("playerTwoBox").style.backgroundColor = "green";
+                console.log("player turn = " + playerTurn);
+
+              break;
+            case 3:
+                document.getElementById("playerTwoBox").style.backgroundColor = "#F5C9CA";
+                document.getElementById("playerThreeBox").style.backgroundColor = "green";
+                console.log("player turn = " + playerTurn);
+
+            break;
+            case 4:
+                document.getElementById("playerThreeBox").style.backgroundColor = "#F5C9CA";
+
+                document.getElementById("playerFourBox").style.backgroundColor = "green";
+                console.log("player turn = " + playerTurn);
+
+            break;
+            default:
+                console.log("player turn = " + playerTurn);
+
+                playerTurn = 1;
+                changeColor();
+            break;
+                
+        } // end of switch
+}
 
 
