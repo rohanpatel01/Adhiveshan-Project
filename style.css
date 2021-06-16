@@ -2,7 +2,7 @@
 
 *
 {
-    border: black solid 1px;
+    
     padding: 0;
     margin: 0;
 }
@@ -14,12 +14,11 @@ div
 
 .container
 {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 100vh;
+    border: 0;
 }
 
 
@@ -45,12 +44,7 @@ div
 #mukhpathBox
 {
     height: 500px;  
-}
-
-.answerButton
-{
-    width: 100px; 
-    height:50px;  
+    border: 1px solid black;
 }
 
 #actualMukhpath
@@ -64,25 +58,16 @@ div
     width: 60%;
     padding: 10px;
     text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+    
 }
 
-.col-6
-{
-    /* text-align: center;
-    margin: auto;
-    width: 50%;
-    padding: 10px; */
-}
 
-/* #playerBox
-{
-    height: 250px;
-    width: 100%;
-} */
 
 .container
 {
-    border: black solid 1px;
+    border: 0;
 }
 
 h1

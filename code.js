@@ -24,8 +24,8 @@ var dict =
     "This body has" : "been received to eradicate all flaws, attain the brāhmic state and offer devotion to Bhagwan. All this is certainly attained by practising satsang.2 Therefore, mumukshus should always practise satsang. ",
     "For this reason," : "Parabrahman Swaminarayan himself manifested in this world and established this divine Satsang.",
     "The shastra titled" : "‘Satsang Diksha’ has been composed with the pure intent that mumukshus acquire the knowledge of this satsang.",
-    "One should know" : " that the true meaning of satsang is to associate with the ātmā,  Satsang Diksha 7 which is true; to associate with Paramatma, who is true; to associate with the guru, who is true; and to associate with true shastras. One who practises this divine satsang becomes blissful.",
-    "‘Diksha’ means firm" : "resolve, unwavering conviction coupled with faith, absolute  8 Satsang Diksha dedication, loving faith, observances and firm refuge.",
+    "One should know" : " that the true meaning of satsang is to associate with the ātmā,  which is true; to associate with Paramatma, who is true; to associate with the guru, who is true; and to associate with true shastras. One who practises this divine satsang becomes blissful.",
+    "‘Diksha’ means firm" : "resolve, unwavering conviction coupled with faith, absolute  dedication, loving faith, observances and firm refuge.",
     "The methods of" : "āgnā and upāsanā revealed by Parabrahman Sahajanand Paramatma are clearly expressed in thisshastra",
     "All males and" : "females are entitled to satsang, all are entitled to happiness andall are entitled to brahmavidyā.",
     "In Satsang, superiority" : "or inferiority should never be understood to be based on gender. All can attain moksha through devotion while observing the dharma prescribed for them.",
@@ -323,28 +323,29 @@ function incorrect()
             case 1:
             document.getElementById("playerOnePenalty").innerHTML = penalties[penaltiesIndex];
             penaltiesIndex++;
-            playerTurn++;
+            // playerTurn++;
             break;
             case 2:
                 document.getElementById("playerTwoPenalty").innerHTML = penalties[penaltiesIndex];
                 penaltiesIndex++;
-                playerTurn++;
+                // playerTurn++;
             break;
             case 3:
                 document.getElementById("playerThreePenalty").innerHTML = penalties[penaltiesIndex];
                 penaltiesIndex++;
-                playerTurn++;
+                // playerTurn++;
             break;
             case 4:
                 document.getElementById("playerFourPenalty").innerHTML = penalties[penaltiesIndex];
                 penaltiesIndex++;
-                playerTurn++;
+                // playerTurn++;
             break;
             default:
                 document.getElementById("playerOnePenalty").innerHTML = penalties[penaltiesIndex];
                 penaltiesIndex++;
-                playerTurn++;
-                playerTurn = 2;
+                // playerTurn++;
+                playerTurn = 1;
+                incorrect();
         } // end of switch
 
         console.log("incorrect");
@@ -421,36 +422,35 @@ function showAnswer()
     }
 }
 
-
-// function previous()
-// {
-//     if(canGoNext)
-//     {
-//         dictIndex--;
-//         console.log("previous");
-//         // shows the answer to first three words
-//         document.getElementById("paragraph").innerHTML = keys[dictIndex];
-//     }
-// }
-
 function next()
 {
     if(canGoNext)
     {
         console.log("next");
-        // shows first three words
         document.getElementById("paragraph").innerHTML = keys[dictIndex];
-        //console.log(keys[dictIndex]);
+
+       
+
+
         playerTurn++;
         changeColor();
         
+
+        if(playerTurn == 1)
+        {
+            alert("Now it's time to make sure you've completed your penalties if you have them!");
+            document.getElementById("playerOnePenalty").innerHTML = "Penaly";
+            document.getElementById("playerTwoPenalty").innerHTML = "Penaly";
+            document.getElementById("playerThreePenalty").innerHTML = "Penaly";
+            document.getElementById("playerFourPenalty").innerHTML = "Penaly";
+        }
 
         canGoNext = false;
         canCheckAnswer = false;
         canShowAnswer = true;
 
         console.log("player turn = " + playerTurn);
-
+        
 
     }
     
